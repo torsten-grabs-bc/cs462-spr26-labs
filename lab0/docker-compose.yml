@@ -1,0 +1,11 @@
+version: "3"
+services:
+  lab0:
+    build: .
+    image: cs462-lab0:latest
+    container_name: lab0
+    volumes:
+      - ./data:/lab/data
+    stdin_open: true
+    tty: true
+    command: bash

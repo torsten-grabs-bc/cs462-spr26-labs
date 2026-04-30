@@ -1,0 +1,23 @@
+# Build output
+build/
+*.class
+*.jar
+
+# Java / IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+target/
+
+# macOS
+.DS_Store
+
+# Office lock / temp files
+~$*
+
+# Logs and local scratch
+*.log
+scratch/
