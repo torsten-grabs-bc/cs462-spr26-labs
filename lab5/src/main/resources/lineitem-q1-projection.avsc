@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "Lineitem",
+  "namespace": "edu.cs462.tpch",
+  "doc": "Projection schema for TPC-H Q1: only the 7 columns Q1 actually uses. Same record name and namespace as the full schema so the Parquet reader matches columns by field name. AvroParquetInputFormat reads only these columns from S3, cutting transferred bytes by roughly 9/16.",
+  "fields": [
+    {"name": "l_quantity",      "type": "double"},
+    {"name": "l_extendedprice", "type": "double"},
+    {"name": "l_discount",      "type": "double"},
+    {"name": "l_tax",           "type": "double"},
+    {"name": "l_returnflag",    "type": "string"},
+    {"name": "l_linestatus",    "type": "string"},
+    {"name": "l_shipdate",      "type": "string"}
+  ]
+}

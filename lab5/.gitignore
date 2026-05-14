@@ -1,0 +1,20 @@
+target/
+*.class
+*.jar
+.idea/
+*.iml
+.vscode/
+.DS_Store
+dependency-reduced-pom.xml
+
+# Locally-generated handouts (regenerated from README.md via pandoc + LibreOffice).
+# Course-management-system uploads use these, but the public repo just ships the README.
+lab5-EMR-Hadoop-TPCH.docx
+lab5-EMR-Hadoop-TPCH.pdf
+lab-handout.docx
+lab-handout.pdf
+
+# LibreOffice temp + lock files (left behind by headless conversions)
+.~lock.*
+*.tmp
+lu*.tmp

@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "Lineitem",
+  "namespace": "edu.cs462.tpch",
+  "doc": "Full TPC-H lineitem schema (16 columns). Reference only; the Q1 job reads via the projection schema in lineitem-q1-projection.avsc so only the columns we need are transferred from S3.",
+  "fields": [
+    {"name": "l_orderkey",      "type": "long"},
+    {"name": "l_partkey",       "type": "long"},
+    {"name": "l_suppkey",       "type": "long"},
+    {"name": "l_linenumber",    "type": "int"},
+    {"name": "l_quantity",      "type": "double"},
+    {"name": "l_extendedprice", "type": "double"},
+    {"name": "l_discount",      "type": "double"},
+    {"name": "l_tax",           "type": "double"},
+    {"name": "l_returnflag",    "type": "string"},
+    {"name": "l_linestatus",    "type": "string"},
+    {"name": "l_shipdate",      "type": "string"},
+    {"name": "l_commitdate",    "type": "string"},
+    {"name": "l_receiptdate",   "type": "string"},
+    {"name": "l_shipinstruct",  "type": "string"},
+    {"name": "l_shipmode",      "type": "string"},
+    {"name": "l_comment",       "type": "string"}
+  ]
+}
