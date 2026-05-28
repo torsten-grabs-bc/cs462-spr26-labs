@@ -1,0 +1,24 @@
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cs462/lab6-spark-starter:latest
+    container_name: lab6-spark-starter
+    ports:
+      - "8888:8888"   # JupyterLab
+      - "4040:4040"   # Spark UI
+    environment:
+      # Token printed in the launch URL: http://localhost:8888/?token=lab6
+      JUPYTER_TOKEN: "lab6"
+    volumes:
+      # Your notebooks (edited from host, persisted across container restarts)
+      - ./notebooks:/home/jovyan/work
+      # AWS credentials, read-only, picked up by ProfileCredentialsProvider
+      - ${HOME}/.aws:/home/jovyan/.aws:ro
+    # Note: we intentionally do NOT mount a Docker volume at /home/jovyan/.ivy2.
+    # A fresh named volume is root-owned, which would block the jovyan user
+    # from writing Spark's Ivy resolution cache. Resolved JARs live in the
+    # container's writable layer instead — that persists across `docker compose
+    # restart`, but not across `docker compose down`. The first SparkSession in
+    # a fresh container takes ~30s extra to resolve the S3A JARs from Maven.

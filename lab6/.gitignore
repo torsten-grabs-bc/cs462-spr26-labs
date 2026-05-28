@@ -1,0 +1,28 @@
+# Jupyter checkpoints
+**/.ipynb_checkpoints/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Mac
+.DS_Store
+
+# Local Spark work
+spark-warehouse/
+metastore_db/
+derby.log
+
+# IDE
+.vscode/
+.idea/
+
+# Locally-generated handouts (regenerated from README.md via pandoc + LibreOffice).
+# Course-management-system uploads use these, but the public repo just ships the README.
+lab6-Spark-TPCH.docx
+lab6-Spark-TPCH.pdf
+
+# LibreOffice temp + lock files (left behind by headless conversions)
+.~lock.*
+*.tmp
+lu*.tmp
