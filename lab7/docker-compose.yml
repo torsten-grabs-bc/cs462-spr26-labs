@@ -1,0 +1,19 @@
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cs462/lab7-spark-starter:latest
+    container_name: lab7-spark-starter
+    ports:
+      - "8888:8888"   # JupyterLab
+      - "4040:4040"   # Spark UI
+    environment:
+      JUPYTER_TOKEN: "lab7"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      # Mounts your AWS Learner Lab credentials read-only into the container.
+      # macOS / Linux: ${HOME} expands to your home directory.
+      # Windows (PowerShell): if ${HOME} does not expand, replace it with your
+      # full path, e.g.  C:\Users\you\.aws:/home/jovyan/.aws:ro
+      - ${HOME}/.aws:/home/jovyan/.aws:ro

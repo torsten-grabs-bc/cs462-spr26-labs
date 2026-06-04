@@ -1,0 +1,28 @@
+# Jupyter checkpoints
+**/.ipynb_checkpoints/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Mac
+.DS_Store
+
+# Local Spark work + the cross-notebook feature handoff
+spark-warehouse/
+metastore_db/
+derby.log
+**/photo_features.parquet/
+
+# Student screenshot folders (created during the lab)
+notebook1_screenshots/
+notebook2_screenshots/
+
+# Locally-generated handouts (regenerated from README.md via pandoc + LibreOffice).
+lab7-Media-Spatial.docx
+lab7-Media-Spatial.pdf
+
+# LibreOffice temp + lock files
+.~lock.*
+*.tmp
+lu*.tmp
